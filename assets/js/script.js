@@ -14,11 +14,6 @@ let generatePassword = function() {
   }
 
   // Set up window prompts and variables for responses for the confirmation prompt at the end
-  var capYes = "";
-  var lowYes  = "";
-  var numYes = "";
-  var specYes = "";
-
 
   let inputPos = "abcdefghijklmnopqrstuvwxyz"
   let verifyChar = 0;
@@ -94,7 +89,6 @@ let generatePassword = function() {
      // If all characters selected are found then the password will print, otherwise it will run again
 
     if (verifyFound === verifyChar) {
-      console.log(verifyChar + verifyFound);
       return passWord;
     } else {
       getPassWord();
