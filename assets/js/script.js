@@ -60,11 +60,7 @@ let generatePassword = function() {
   // Set up the randomly selecting characters from the input string and looping till all characters are found
   var passWord = "";
 
-  if (inputPos.length > 0) {
-    for (let i = 0, n = inputPos.length; i < passLength; i++) {
-      passWord += inputPos.charAt(Math.floor(Math.random() * n));
-    }
-  } else {
+  if (inputPos.length <= 0) {
     passWord = "Unable to form Password";
     return passWord;
   }
@@ -75,7 +71,6 @@ let generatePassword = function() {
   while (verifyChar !== verifyFound){
     var verifyFound = 0;
     var passWord = "";
-    console.log ("again");
     for (let i = 0, n = inputPos.length; i < passLength; i++) {
       passWord += inputPos.charAt(Math.floor(Math.random() * n));
     }
@@ -116,8 +111,6 @@ let generatePassword = function() {
     // If all characters selected are found then the password will print, otherwise it will run again
 
     if (verifyFound === verifyChar) {
-      console.log("Character choice: " + verifyChar + " Characters found: " + verifyFound);
-      console.log(passWord);
       return passWord;
     }
   }
