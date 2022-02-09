@@ -1,5 +1,8 @@
 # Password Generator
 
+## Site link
+https://dsamuelson.github.io/p-gen/
+
 ## Very simple password generator will form a password based on 5 criteria
 - length between 8 and 128 characters
 - Do you want Capital Letters
